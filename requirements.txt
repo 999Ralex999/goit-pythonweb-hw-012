@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy[asyncio]
+asyncpg
+alembic
+passlib[bcrypt]
+python-jose
+fastapi-mail
+cloudinary
+slowapi
+libgravatar
+pydantic
+pydantic-settings
