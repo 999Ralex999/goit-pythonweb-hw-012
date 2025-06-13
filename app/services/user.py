@@ -6,7 +6,7 @@ from app.core.config import settings
 from app.security.passwords import password_hasher
 from app.models.user import User
 from app.errors.user import UserExistsException
-from app.repositories.user import UserRepository
+from app.repository.user import UserRepository
 from app.schemas.user import UserModel
 from app.schemas.mail import MailModel
 from app.services.mail import mail_service

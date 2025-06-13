@@ -9,7 +9,7 @@ from app.security.passwords import password_hasher
 from app.models.user import User
 from app.security.tokens import TokenTypes, token_encoder
 from app.services.user import UserService
-from app.repositories.user import UserRepository
+from app.repository.user import UserRepository
 from app.db.session import get_db
 from app.core.config import settings
 

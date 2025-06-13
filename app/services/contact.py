@@ -3,7 +3,8 @@ from fastapi import HTTPException
 from app.errors.contact import ContactExistsException
 from app.models.contact import Contact
 from app.schemas.contact import ContactModel, ContactQuery
-from app.repositories.contact import ContactRepository
+from app.repository.contact import ContactRepository
+
 
 class ContactService:
     """

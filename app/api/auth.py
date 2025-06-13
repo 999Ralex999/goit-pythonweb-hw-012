@@ -14,7 +14,7 @@ from app.schemas.auth import AuthResponse, TokenRefreshRequest
 from app.db.session import get_db
 from app.services.user import UserService
 from app.services.auth import auth_service, get_current_user
-from app.repositories.user import UserRepository
+from app.repository.contact import ContactRepository
 from app.models.user import User
 from app.exceptions.user_exists_exception import UserExistsException
 

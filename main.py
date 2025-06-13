@@ -5,10 +5,11 @@ from slowapi.errors import RateLimitExceeded
 
 from app.core.config import settings
 from app.middlewares.logger import add_process_time_header
-from app.routes.utils import router as utils_router
-from app.routes.contacts import router as contacts_router
-from app.routes.auth import router as auth_router
-from app.routes.users import router as users_router
+
+from app.api.utils import router as utils_router
+from app.api.contacts import router as contacts_router
+from app.api.auth import router as auth_router
+from app.api.users import router as users_router
 
 app = FastAPI()
 
@@ -48,4 +49,5 @@ async def rate_limit_handler(request: Request, exc: RateLimitExceeded):
 
 if __name__ == "__main__":
     print("To start the server, run: uvicorn main:app --reload")
+
 

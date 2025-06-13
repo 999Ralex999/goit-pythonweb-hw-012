@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.schemas.contact import ContactModel, ContactQuery, ContactResponse
 from app.db.session import get_db
 from app.services.contact import ContactService
-from app.repositories.contact import ContactRepository
+from app.repository.contact import ContactRepository
 from app.services.auth import get_current_user
 from app.models.user import User
 
