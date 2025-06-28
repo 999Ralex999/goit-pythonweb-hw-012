@@ -1,6 +1,6 @@
-class UserExistsException(Exception):
+class TokenDecodeException(Exception):
     """
-    Exception for when a user already exists
+    Exception for when a token cannot be decoded
     """
 
     def __init__(self, message: str):

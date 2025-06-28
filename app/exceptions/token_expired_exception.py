@@ -1,6 +1,6 @@
-class UserExistsException(Exception):
+class TokenExpiredException(Exception):
     """
-    Exception for when a user already exists
+    Exception for when a token has expired
     """
 
     def __init__(self, message: str):

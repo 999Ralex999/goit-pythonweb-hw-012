@@ -1,29 +1,29 @@
-app.models package
+app.entity package
 ==================
 
 Submodules
 ----------
 
-app.models.base module
+app.entity.base module
 -----------------------
 
-.. automodule:: app.models.base
+.. automodule:: app.entity.base
    :members:
    :undoc-members:
    :show-inheritance:
 
-app.models.contact module
+app.entity.contact module
 --------------------------
 
-.. automodule:: app.models.contact
+.. automodule:: app.entity.contact
    :members:
    :undoc-members:
    :show-inheritance:
 
-app.models.user module
+app.entity.user module
 -----------------------
 
-.. automodule:: app.models.user
+.. automodule:: app.entity.user
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,8 +31,7 @@ app.models.user module
 Module contents
 ---------------
 
-.. automodule:: app.models
+.. automodule:: app.entity
    :members:
    :undoc-members:
    :show-inheritance:
-

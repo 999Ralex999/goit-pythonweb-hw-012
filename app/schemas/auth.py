@@ -1,6 +1,11 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
+
 
 class AuthResponse(BaseModel):
+    """
+    Auth response model
+    """
+
     access_token: str | None = Field(
         default=None, description="Access token used to authenticate requests"
     )
@@ -9,9 +14,12 @@ class AuthResponse(BaseModel):
     )
     token_type: str = Field(default="bearer", description="Token type")
 
+
 class TokenRefreshRequest(BaseModel):
+    """
+    Refresh token request model
+    """
+
     refresh_token: str = Field(
-        ..., min_length=1, max_length=255, description="Refresh token"
+        default="", min_length=1, max_length=255, description="Refresh token"
     )
-
-

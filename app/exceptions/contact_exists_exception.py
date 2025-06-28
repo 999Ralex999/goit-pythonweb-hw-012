@@ -1,6 +1,6 @@
-class UserExistsException(Exception):
+class ContactExistsException(Exception):
     """
-    Exception for when a user already exists
+    Exception for when a contact already exists
     """
 
     def __init__(self, message: str):

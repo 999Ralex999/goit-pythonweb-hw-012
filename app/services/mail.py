@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 from fastapi_mail import ConnectionConfig, FastMail, MessageSchema, MessageType
 from fastapi_mail.errors import ConnectionErrors
-from app.core.config import settings
+from app.conf.config import settings
 from app.schemas.mail import MailModel
 
 logging.basicConfig(
@@ -24,15 +24,23 @@ conf = ConnectionConfig(
     TEMPLATE_FOLDER=Path(__file__).parent.parent.parent / "templates" / "email",
 )
 
+
 class MailService:
     """
-    Сервіс для відправки email-повідомлень.
+    Service for sending emails
     """
 
     async def send_email(self, mail: MailModel) -> bool:
         """
-        Надіслати email.
+        Send an email
+
+        Args:
+            mail (MailModel): The email to send
+
+        Returns:
+            bool: True if the email was sent, False otherwise
         """
+
         try:
             logging.info(f"Sending email to {mail.to}")
             message = MessageSchema(
@@ -41,6 +49,7 @@ class MailService:
                 template_body=mail.data,
                 subtype=MessageType.html,
             )
+
             fm = FastMail(conf)
             await fm.send_message(message, template_name=mail.template)
             logging.info(f"Email sent to {mail.to}")
@@ -50,6 +59,8 @@ class MailService:
         except Exception as err:
             logging.error(f"Error sending email: {err}")
             return False
+
         return True
+
 
 mail_service = MailService()

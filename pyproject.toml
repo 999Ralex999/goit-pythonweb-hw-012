@@ -27,6 +27,7 @@ dependencies = [
     "httpx (>=0.28.1,<0.29.0)",
     "asgi-lifespan (>=2.1.0,<3.0.0)",
     "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "redis (>=6.2.0,<7.0.0)",
 ]
 
 [build-system]
@@ -39,6 +40,8 @@ sphinx-autodoc-typehints = "1.22"
 pytest = "^8.4.0"
 pytest-asyncio = "^1.0.0"
 pytest-cov = "^6.2.1"
+aiosqlite = "^0.21.0"
+httpx = "^0.28.1"
 
 [tool.pytest.ini_options]
 filterwarnings = [
